@@ -29,9 +29,9 @@ err = c.Decr("request.count_total", nil, 1)
 err = c.Count("request.count_total", 2, nil, 1)
 ```
 
-## Buffering Client
+## Buffered Client
 
-DogStatsD accepts packets with multiple statsd payloads in them.  Using the BufferingClient via `NewBufferingClient` will buffer up commands and send them when the buffer is reached or after 100msec.
+DogStatsD accepts packets with multiple statsd payloads in them.  Using the BufferedClient via `NewBuffered` will buffer up commands and send them when the buffer is reached or after 100msec.
 
 ## Development
 
